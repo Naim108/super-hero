@@ -5,6 +5,7 @@ import './Container.css'
 
 const Container = () => {
     const [items,setItems]=useState([])
+    // cart for using button
     const [cart,setCart]=useState([])
 
     useEffect(()=>{
@@ -26,6 +27,7 @@ const Container = () => {
                 <div className="college-details">
                     {
                         items.map(item=><Main item={item}
+                            // key
                             key={item.name}
                             handleAddToCart={handleAddToCart}
                         ></Main>)

@@ -1,6 +1,6 @@
 import React from 'react';
 import './Cart.css'
-
+// cart
 const Cart = (props) => {
     const {name,cart}=props;
     const totalReducer=(previous,item)=>previous+item.
