@@ -3,17 +3,18 @@ import './Main.css'
 
 
 const Main = (props) => {
-    const{img,name,position,category,partcipent,division}=props.item;
+    const{img,name,position,category,participant,division}=props.item;
     
     return (
-        <div>
-          <div><h3>Name: {name}</h3></div>
-            <div><p>Position: {position}</p></div>
-            <div><p>Catagory: {category}</p></div>
-            <div><p>Partcipent: {partcipent}</p></div>
-            <div><p>Devision: {division}</p></div>
+        <div className="details">
+          <img src={img} alt="" />
+          <h3>Name: {name}</h3>
+            <p>Position: {position}</p>
+            <p>Catagory: {category}</p>
+            <p>Participant: {participant}</p>
+            <p>Devision: {division}</p>
             <button onClick={()=>props.handleAddToCart(props.item)}
-             className="select-btn"> <i class="fas fa-check-circle"></i> Select college</button>
+             className="select-btn"> <i className="fas fa-check-circle"></i> Select college</button>
         </div>
     );
 };
